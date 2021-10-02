@@ -1,0 +1,205 @@
+.mainContainer {
+  min-height: 100vh;
+}
+
+.topNavComponent {
+  top: 0;
+  background: #fff;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.userDetailsContainer {
+  margin-left: auto;
+  position: relative;
+  align-self: center;
+}
+
+.currentUserName {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  text-transform: capitalize;
+  margin-bottom: 0px !important;
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  color: #2da6c0;
+}
+
+.userIcon:focus {
+  color: #2da6c0;
+}
+
+.userIcon:hover {
+  color: #2da6c0;
+}
+
+.svgIconsMainDiv {
+  display: flex;
+}
+
+.userIconSvgDiv svg {
+  width: 46px;
+  height: 46px;
+  margin-right: 15px;
+}
+
+.arrowIconSvgDiv {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownMenu {
+  min-width: 18.5rem !important;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.16);
+  border-radius: 5px !important;
+  padding: 1.2rem 0.8rem !important;
+}
+
+.userDetailsBox {
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.userAvatarContainer {
+  width: 50px;
+  height: 50px;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.userAvatar {
+  border-radius: 50%;
+}
+
+.userDetails {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.userDetailsContainer {
+  margin-left: 5%;
+  position: relative;
+  align-self: center;
+}
+
+.userDetailsTopic {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0px;
+}
+
+.dropdownTextLogout {
+  font-weight: 600;
+  font-size: 16px;
+  background: #ffffff !important;
+  padding: 0.25rem 0.3rem;
+  color: #eb5757 !important;
+}
+
+.signoutIcon {
+  margin-right: 20px;
+}
+
+.loadingDiv {
+  margin-top: 20%;
+}
+
+.accountContainerBox {
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 1.8px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  padding: 1.1rem;
+  width: 82%;
+  margin: auto;
+}
+
+.accountSubTopic {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+}
+
+.accountDescription {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0px;
+  color: #979797;
+}
+
+.connectBtn {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #2da6c0 !important;
+  text-align: center;
+  width: 100%;
+  outline: none !important;
+  border-radius: 50px !important;
+  border: none !important;
+}
+
+.connectBtn:hover {
+  opacity: 0.8;
+}
+.connectBtn:focus {
+  opacity: 0.8;
+  box-shadow: none !important;
+}
+.connectBtn:disabled {
+  opacity: 0.3;
+  box-shadow: none !important;
+}
+
+.activeAccountSubTopic {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 0px;
+}
+
+.disconnectButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #eb5757;
+  cursor: pointer;
+}
+
+.disconnectIcon {
+  margin-left: 1rem;
+}
+
+.uploadingPrograssBar {
+  height: 0.3rem !important;
+}
+
+.uploadingPrograssBar div {
+  background-color: #3bd75d !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .loadingDiv {
+    margin-top: 75%;
+  }
+}

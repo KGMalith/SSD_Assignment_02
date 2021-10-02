@@ -1,0 +1,61 @@
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  border-color: #2DA6C0;
+}
+
+.dropzone:focus {
+  border-color: #2DA6C0;
+}
+
+.dropzoneInvalid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #dc3545;
+  border-style: solid;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+  cursor: pointer;
+}
+
+.dropzoneInvalid:hover {
+  border-color: #dc3545;
+}
+
+.dropzoneInvalid:focus {
+  border-color: #dc3545;
+}
+
+.fileSizeLabel {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.errormessage {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+  margin-bottom: 0px;
+}
