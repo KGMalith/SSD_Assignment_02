@@ -7,6 +7,7 @@ import { getUserDetails, logout } from '../services/util/auth';
 import CSSLoader from '../components/cssLoader';
 import FileUploadBox from '../components/upload-box';
 import { connectGoogleAccountRequest, disconnectGoogleAccountRequest, initiateGoogleRequest, uploadImageToDriveRequest } from '../services/util/upload';
+import { toast } from 'react-toastify';
 
 function Home(props) {
     let [state, setState] = useState({
@@ -93,7 +94,8 @@ function Home(props) {
     async function loadUserData() {
         set_page_loading(true);
         const query = new URLSearchParams(window.location.search);
-        const token = query.get('code')
+        const token = query.get('code');
+        const error = query.get('error');
         if (token) {
             let respond = await connectGoogleAccountRequest(token);
             if (respond.success === true) {
@@ -108,7 +110,24 @@ function Home(props) {
             } else {
                 set_page_loading(false);
             }
-        } else {
+        } else if (error){
+            toast.error("Something went wrong!. Please try again later", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            let respond = await getUserDetails();
+            if (respond.success === true) {
+                setState(respond.data);
+                set_page_loading(false);
+            } else {
+                set_page_loading(false);
+            }
+        }else {
             let respond = await getUserDetails();
             if (respond.success === true) {
                 setState(respond.data);
@@ -128,9 +147,9 @@ function Home(props) {
         <div className="mainContainer">
             {is_page_loading ?
                 <div className="loadingDiv">
-                    <Col sm={{ span: 4, offset: 4 }}>
+                    <div className="loaderWrapper">
                         <CSSLoader />
-                    </Col>
+                    </div>
                 </div>
                 :
                 <div>
